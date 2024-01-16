@@ -3,7 +3,14 @@ from selenium.webdriver.chrome.service import Service
 
 s = Service()
 
-driver = webdriver.Chrome(service=s)
+chromeOptions = webdriver.ChromeOptions()
+
+chromeOptions.add_argument("incognito")
+chromeOptions.add_argument("start-maximized")
+
+driver = webdriver.Chrome(service=s,options=chromeOptions)
+driver.implicitly_wait(5)
+
 
 driver.get("https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC")
 
