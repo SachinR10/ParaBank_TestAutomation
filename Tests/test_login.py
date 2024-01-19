@@ -8,7 +8,7 @@ class Test_login(BaseClass):
     def test_login_with_correct_creds(self):
         #login operations
         self.driver.find_element(By.NAME,"username").send_keys("sachin")
-        self.driver.find_element(By.NAME,"password").send_keys("sachin@10")
+        self.driver.find_element(By.NAME,"password").send_keys("sachin")
         self.driver.find_element(By.XPATH,"//input[@type='submit']").click()
         self.driver.find_element(By.LINK_TEXT,"Log Out").click()
 
