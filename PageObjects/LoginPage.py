@@ -5,6 +5,7 @@ class LoginPage:
     user_name_field = (By.NAME,"username")
     password_field = (By.NAME,"password")
     login_button = (By.XPATH,"//input[@type='submit']")
+    register_link = (By.LINK_TEXT,"Register")
 
     def __init__(self,driver):
         self.driver=driver
@@ -18,6 +19,8 @@ class LoginPage:
     def get_login_button(self):
         return self.driver.find_element(*LoginPage.login_button)
     
+    def get_register_link(self):
+        return self.driver.find_element(*LoginPage.register_link)
 
 
 
