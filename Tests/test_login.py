@@ -21,7 +21,7 @@ class Test_login(BaseClass):
 
         loginPage = LoginPage(self.driver)
         loginPage.get_user_name_field().send_keys("abcd")
-        loginPage.get_password_field().send_keys("abcd10")
+        loginPage.get_password_field().send_keys("abcd10asd")
         loginPage.get_login_button().click()
         assert 'error' in self.driver.find_element(By.CSS_SELECTOR,".error").text
 
